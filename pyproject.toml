@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "maimai-sync"
+version = "0.2.0"
+description = "舞萌DX 成绩同步工具 — 上传水鱼 / 从水鱼下载"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "maimai-sync contributors" },
+]
+keywords = ["maimai", "maimaidx", "diving-fish", "sync"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Games/Entertainment :: Arcade",
+]
+dependencies = [
+    "httpx>=0.24",
+    "sqlalchemy>=2.0",
+    "aiosqlite>=0.19",
+    "fastapi>=0.100",
+    "uvicorn[standard]>=0.20",
+    "aiomysql>=0.2",
+    "pycryptodome>=3.10",
+    "pytz>=2024.1",
+]
+
+[project.scripts]
+maimai-sync = "maimai_sync.__main__:main"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.4",
+]

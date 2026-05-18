@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+maimai_data/
+.env
+.venv/
+.workbuddy/
